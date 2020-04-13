@@ -4,7 +4,7 @@ usin namespace std;
 void print_array(int x[], int size) //P1 B
 {
   int i = 0;
-  for (i, i<size, i++)
+  for (i; i<size; i++)
   {
     cout<<x[i];
   }
@@ -13,7 +13,7 @@ void print_array(int x[], int size) //P1 B
 void copy_arrays(int A[], int sizeA, int B[], int sizeB, int C[], int sizeC) //C
 {
   int i = 0;
-  for (i, i<sizeC, i++)
+  for (i; i<sizeC; i++)
   {
     if (i<sizeA)
     {
@@ -28,7 +28,7 @@ void copy_arrays(int A[], int sizeA, int B[], int sizeB, int C[], int sizeC) //C
 
 void even_replace (int X[],int size) // D
 {
-  for (int i = 0, i<size, i++)
+  for (int i = 0; i<size; i++)
   {
     if (i%2 == 0)
     {
@@ -41,7 +41,7 @@ void reverse (int X[], int size) //E
 {
   if (size%2 == 0)
   {
-    for(int i = 0, i < size/2 , i++)
+    for(int i = 0; i < size/2 ; i++)
     {
       int a  = X[i];
       X[i] = X[size-1-i];
@@ -50,7 +50,7 @@ void reverse (int X[], int size) //E
   }
   else
   {
-    for (int i = 0, i < (size-1)/2, i++)
+    for (int i = 0; i < (size-1)/2; i++)
     {
       int a = X[i];
       X[i] = X[size-1-i];
@@ -63,7 +63,7 @@ int index_max(int X[], int size) //F
 {
   int i = 0;
   int max_index = 0;
-  for (i, i<size,i++)
+  for (i; i<size; i++)
   {
     if (X[i] > X[max_index])
     {
