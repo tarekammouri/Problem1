@@ -1,0 +1,88 @@
+#include <iostream>
+usin namespace std;
+
+void print_array(int x[], int size) //P1 B
+{
+  int i = 0;
+  for (i, i<size, i++)
+  {
+    cout<<x[i];
+  }
+}
+
+void copy_arrays(int A[], int sizeA, int B[], int sizeB, int C[], int sizeC) //C
+{
+  int i = 0;
+  for (i, i<sizeC, i++)
+  {
+    if (i<sizeA)
+    {
+      C[i] = A[i];
+    }
+    else
+    {
+      C[i] = B[i - sizeA];
+    }
+  }
+}
+
+void even_replace (int X[],int size) // D
+{
+  for (int i = 0, i<size, i++)
+  {
+    if (i%2 == 0)
+    {
+      X[i] = 100;
+    }
+  }
+}
+
+void reverse (int X[], int size) //E
+{
+  if (size%2 == 0)
+  {
+    for(int i = 0, i < size/2 , i++)
+    {
+      int a  = X[i];
+      X[i] = X[size-1-i];
+      X[size-1-i] = a;
+    }
+  }
+  else
+  {
+    for (int i = 0, i < (size-1)/2, i++)
+    {
+      int a = X[i];
+      X[i] = X[size-1-i];
+      X[i-size-z] = a;
+    }
+  }
+}
+
+int index_max(int X[], int size) //F
+{
+  int i = 0;
+  int max_index = 0;
+  for (i, i<size,i++)
+  {
+    if (X[i] > X[max_index])
+    {
+      max_index = i;
+    }
+  }
+  return max_index;
+}
+
+void main()
+{
+  int A[] = {1, 2, 3, 4, 5}; //P1 A
+  int B[] = {6, 7, 8, 9, 10}; // P1 A
+  int C[10] = {}; // P1 A
+  copy_arrays(A[],5,B[],5,C[],10); //C
+  print_array(C[],10); //C
+  even_replaceI(A[], 5); //D
+  print_array(A[], 5); //D
+  reverse(B,5); //E
+  print_array(B,5); // E
+  cout<<index_max(B[], 5); //F
+}
